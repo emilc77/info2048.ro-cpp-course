@@ -7,3 +7,7 @@ j4biz-commons-core.iml
 .DS_Store
 
 /wip/*
+/cmake-build-debug/*
+
+# compilatele in CLion
+main

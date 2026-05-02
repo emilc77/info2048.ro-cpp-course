@@ -15,8 +15,8 @@ int main() {
     vector <int> cifre;
 
     while (numar != 0) {
-        int rest = numar % 10;
-        cifre.insert(cifre.begin(), rest);
+        int ultima_cifra = numar % 10;
+        cifre.insert(cifre.begin(), ultima_cifra);
 
         numar = numar / 10;
     }

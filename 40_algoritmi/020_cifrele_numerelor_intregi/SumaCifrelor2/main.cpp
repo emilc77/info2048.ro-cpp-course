@@ -7,8 +7,8 @@ int main() {
     int suma = 0;
 
     while (numar != 0) {
-        int rest = numar % 10;
-        suma = suma + rest;
+        int ultima_cifra = numar % 10;
+        suma = suma + ultima_cifra;
 
         numar = numar / 10;
     }

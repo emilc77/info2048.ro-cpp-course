@@ -15,8 +15,8 @@ int main() {
     vector <int> cifre;
 
     while (numar != 0) {
-        int rest = numar % 10;
-        cifre.push_back(rest);
+        int ultima_cifra = numar % 10;
+        cifre.push_back(ultima_cifra);
 
         numar = numar / 10;
     }
