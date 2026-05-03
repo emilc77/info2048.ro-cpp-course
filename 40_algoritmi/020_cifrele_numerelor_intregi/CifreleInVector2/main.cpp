@@ -14,12 +14,12 @@ int main() {
     int numar = 123456;
     vector <int> cifre;
 
-    while (numar != 0) {
+    do {
         int ultima_cifra = numar % 10;
         cifre.insert(cifre.begin(), ultima_cifra);
 
         numar = numar / 10;
-    }
+    } while (numar != 0);
 
     to_cout(cifre); // 1 2 3 4 5 6
 
