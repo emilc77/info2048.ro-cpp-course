@@ -4,16 +4,13 @@ using namespace std;
 
 int main() {
     int numar = 456;
-    int suma = 0;
-
-    do {
+    int produsul = 1;
+    while (numar != 0) {
         int ultima_cifra = numar % 10;
-        suma = suma + ultima_cifra;
-
+        produsul = produsul * ultima_cifra;
         numar = numar / 10;
-    } while (numar != 0);
-
-    cout << suma << endl;
+    }
+    cout << produsul << endl;
 
     return 0;
 }
