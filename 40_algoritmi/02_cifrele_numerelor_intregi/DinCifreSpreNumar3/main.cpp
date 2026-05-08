@@ -8,9 +8,7 @@ int main() {
 
     int numar = 0;
     for (int i = 0; i < lungime_arr; ++i) {
-        if (i != 0) {
-            numar *= 10;
-        }
+        numar *= 10;
         numar += cifre[i];
     }
     cout << numar << endl; // 1234
