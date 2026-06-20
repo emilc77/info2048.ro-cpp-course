@@ -11,6 +11,9 @@ j4biz-commons-core.iml
 
 # compilatele in CLion
 main
+main.yml
+main.exe
+Info.plist
 
 sepi/2026-oji/06/10_cifre/10cifre.in
 sepi/2026-oji/06/10_cifre/10cifre.out
