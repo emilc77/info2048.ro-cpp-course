@@ -26,3 +26,5 @@ Info.plist
 sepi/2026-oji/06/10_cifre/10cifre.in
 sepi/2026-oji/06/10_cifre/10cifre.out
 
+# directoarele create by CLion (cred ca la debug)
+*.dSYM
