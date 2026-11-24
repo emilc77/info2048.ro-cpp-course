@@ -33,8 +33,13 @@ int problema_2(string line) {
 }
 
 // a trebuit sa intorc si stringul si countul
-// Asa ca am trimis un map cu un singur element.
-map<string, int> problema_3(string line, int stringSize) {
+// Asa ca am facut un struct.
+struct Problema3Rezultat {
+    int occurences;
+    string token;
+};
+
+Problema3Rezultat problema_3(string line, int stringSize) {
     map<string, int> substringsCount;
     for (int index = 0; index < line.size() - stringSize + 1; index++) {
         string substring = line.substr(index, stringSize);
@@ -54,12 +59,12 @@ map<string, int> problema_3(string line, int stringSize) {
     }
 
     if (mostFrequentCount == 1) {
-        // n-am gasit duplicate -> empty map
-        return {};
+        // n-am gasit duplicate
+        return {0, ""};
     }
 
     sort(frequentSubstrings.begin(), frequentSubstrings.end());
-    return {{frequentSubstrings[0], mostFrequentCount}};
+    return {mostFrequentCount, frequentSubstrings.at(0)};
 }
 
 
@@ -67,20 +72,16 @@ string problema_3(string line) {
     int countByNow = 0;
     string solutionByNow;
     for (int stringSize = 2; stringSize < line.size(); stringSize++) {
-        map<string, int> rezolvare = problema_3(line, stringSize);
-        if (rezolvare.empty()) {
+        Problema3Rezultat rezolvare = problema_3(line, stringSize);
+        if (rezolvare.occurences == 0) {
             if (stringSize == 2) {
                 return line;
             } else {
                 return solutionByNow;
             }
         } else {
-            string newSolution;
-            int newCount = 0;
-            for (const auto &it : rezolvare) {
-                newSolution = it.first;
-                newCount = it.second;
-            }
+            string newSolution = rezolvare.token;
+            int newCount = rezolvare.occurences;
             if (newCount < countByNow) {
                 return solutionByNow;
             } else {
